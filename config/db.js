@@ -1,6 +1,6 @@
 const db = require('../models');
 
-asyync function connectDatabase() {
+async function connectDatabase() {
     try {
         await db.sequelize.authenticate();
         console.log('Database Connected Successfully.');
