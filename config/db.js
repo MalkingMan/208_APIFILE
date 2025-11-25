@@ -3,13 +3,13 @@ const db = require('../models');
 async function connectDatabase() {
     try {
         await db.sequelize.authenticate();
-        console.log('Database Connected Successfully.');
+        console.log('✅ Database Connected Successfully.');
 
         await db.sequelize.sync({ alter: true });
-        console.log('Database synchronized');
+        console.log('✅ Database synchronized');
 
     } catch (err) {
-        console.error('Database Connection Failed', err.message);
+        console.error('❌ Database Connection Failed', err.message);
         process.exit(1);
     }
 }
